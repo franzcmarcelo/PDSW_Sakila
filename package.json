@@ -1,0 +1,31 @@
+{
+  "name": "pdsw_sakila",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "html": "copyfiles --up 1 src/public/*.html dist",
+    "build": "tsc && npm run html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franzcmarcelo/PDSW_Sakila.git"
+  },
+  "author": "franz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franzcmarcelo/PDSW_Sakila/issues"
+  },
+  "homepage": "https://github.com/franzcmarcelo/PDSW_Sakila#readme",
+  "dependencies": {
+    "@types/node": "^14.0.23",
+    "express": "^4.17.1",
+    "mysql": "github:mysqljs/mysql"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/mysql": "^2.15.15",
+    "copyfiles": "^2.3.0"
+  }
+}
