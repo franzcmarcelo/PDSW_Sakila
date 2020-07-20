@@ -9,10 +9,19 @@ server.start(()=>{
     console.log('servidor corriendo en el puerto 3000');
 })
 
+let $container = document.querySelector('#example') as HTMLDivElement
+let $item = document.createElement('h3') as HTMLHeadingElement
+$item.textContent=`RAAAA`
+$container.appendChild($item)
+
 export function handleCountries(countries: Object[]) {
     console.log('HANDLE COUNTRIES');
-    const t_countries = JSON.parse(JSON.stringify(countries))
-    for (const country of t_countries) {
+    const trans_countries = JSON.parse(JSON.stringify(countries))
+    // let $container = document.querySelector('#example') as HTMLDivElement
+    for (const country of trans_countries) {
+        // let $item = document.createElement('h3') as HTMLHeadingElement
+        // $item.textContent=`${country.country}`
+        // $container.appendChild($item)
         console.log(`ID -> ${country.country_id}`);
         console.log(`NAME -> ${country.country}`);
     }
@@ -28,8 +37,3 @@ export function handleCustomerOfCountry(info: Object[]) {
         console.log(`COUNTRY_ID -> ${customer.country_id}`);
     }
 }
-
-// FIXME: Ejecutar
-// tsc -w
-// npm run build (html)
-// nodemon dist/index (servidor)

@@ -1,5 +1,3 @@
-// Utilizanso patron singelton
-
 import mysql from 'mysql';
 
 export default class MySQL {
